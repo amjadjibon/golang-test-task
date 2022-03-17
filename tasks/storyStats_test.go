@@ -43,7 +43,7 @@ func TestStoryStats(t *testing.T) {
 			t.Errorf("storyState(%q) == %f, want %f", test.input.s, average, test.want.average)
 		}
 
-		if reflect.DeepEqual(averageLenWords, test.want.averageLenWords) {
+		if !reflect.DeepEqual(averageLenWords, test.want.averageLenWords) {
 			t.Errorf("storyState(%q) == %s, want %s", test.input.s, averageLenWords, test.want.averageLenWords)
 		}
 	}
