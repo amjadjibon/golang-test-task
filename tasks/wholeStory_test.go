@@ -17,7 +17,7 @@ func TestWholeStory(t *testing.T) {
 		input input
 		want  output
 	}{
-		{input: input{s: "23-ab-48-caba-56-haha"}, want: output{story: "ab coaba haha"}},
+		{input: input{s: "23-ab-48-caba-56-haha"}, want: output{story: "ab caba haha"}},
 		{input: input{s: "1-hello-2-world"}, want: output{story: "hello world"}},
 	}
 
