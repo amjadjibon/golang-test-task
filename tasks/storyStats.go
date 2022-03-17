@@ -5,6 +5,11 @@ import (
 	"strings"
 )
 
+// StoryStats is a struct that contains the stats for a story
+// It is used to calculate the stats for a story
+// First check if input is valid
+// Time complexity: O(n)
+
 func storyStats(input string) (shortest string, longest string, average float64, averageLenWords []string) {
 	var shortsLen = 999999999
 	var maxLen = 0
