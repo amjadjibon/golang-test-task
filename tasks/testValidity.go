@@ -7,6 +7,7 @@ import (
 )
 
 func isASCII(s string) bool {
+	// ASCII is a subset of UTF-8
 	for _, c := range s {
 		if c > unicode.MaxASCII {
 			return false
@@ -16,7 +17,10 @@ func isASCII(s string) bool {
 	return true
 }
 
+// TestValidity tests if the given string is valid.
+//
 func testValidity(input string) bool {
+	// Check if the input is empty
 	if len(input) == 0 {
 		return false
 	}
