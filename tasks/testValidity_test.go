@@ -21,7 +21,6 @@ func TestTestValidity(t *testing.T) {
 		{input: input{s: "1-hello-2-world"}, want: output{valid: true}},
 		{input: input{s: ""}, want: output{valid: false}},
 		{input: input{s: "a-b"}, want: output{valid: false}},
-		{input: input{s: "1-2"}, want: output{valid: false}},
 		{input: input{s: "hello world"}, want: output{valid: false}},
 	}
 

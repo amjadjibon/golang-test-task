@@ -3,7 +3,18 @@ package tasks
 import (
 	"strconv"
 	"strings"
+	"unicode"
 )
+
+func isASCII(s string) bool {
+	for _, c := range s {
+		if c > unicode.MaxASCII {
+			return false
+		}
+	}
+
+	return true
+}
 
 func testValidity(input string) bool {
 	if len(input) == 0 {
@@ -31,6 +42,9 @@ func testValidity(input string) bool {
 				return false
 			}
 
+			if !isASCII(v) {
+				return false
+			}
 		}
 	}
 
