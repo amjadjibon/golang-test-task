@@ -17,8 +17,8 @@ func TestAverageNumber(t *testing.T) {
 		input input
 		want  output
 	}{
-		{input: input{s: "23-ab-48-caba-56-haha"}, want: output{average: 42.3333333333}},
-		{input: input{s: "1-hello-2-world"}, want: output{average: 1.5}},
+		{input: input{s: "23-ab-48-caba-56-haha"}, want: output{average: (23 + 48 + 56) / 3.0}},
+		{input: input{s: "1-hello-2-world"}, want: output{average: (1 + 2) / 2.0}},
 	}
 
 	for _, test := range tests {
